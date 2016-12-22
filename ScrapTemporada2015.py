@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Richard'
 
 # En este fichero voy a obtener los resultados de futbol de la temporada 2014-15
 # WEB: http://www.resultados-futbol.com

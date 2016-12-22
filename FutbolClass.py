@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Richard'
 
 import time, datetime
 
@@ -27,7 +26,9 @@ class Partido():
         self.timestamp = time.mktime(datetime.datetime.strptime(fecha, "%d/%m/%Y").timetuple())
 
     def __str__(self):
-        return "%s::%s::%s::%s::%s::%s::%s::%s::%s" \
-               %(self.idPartido, self.temporada, self.jornada, self.local, self.visitante, self.golesLocal, self.golesVisitante, self.fecha, self.timestamp)
+        return "%s,%s,%s,%s,%s,%s,%s,%s,%s" \
+               %(self.idPartido, self.temporada, self.jornada, 
+                self.local, self.visitante, self.golesLocal, 
+                self.golesVisitante, self.fecha, self.timestamp)
 
 

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Richard'
 
 # En este fichero voy a obtener un historico de partidos de futbol de todas
 # las temporadas anteriores a la actual a partir de la web:
@@ -43,6 +42,12 @@ def replaceHtml (string):
     string = string.replace('&Uacute;','U')
     string = string.replace('&Ugrave;','U')
     string = string.replace('&ntilde;','ñ')
+    string = string.replace('Ã±','ñ')
+    string = string.replace('\xc3\x83\xc2\xa0', 'a')
+    string = string.replace('\xc3\x83\xc2\xa1', 'a')
+    string = string.replace('\xc3\x83\xc2\xa9', 'e')
+    string = string.replace('\xc3\x83\xc2\xad', 'i')
+    string = string.replace('\xc3\x83\xc2\xb3', 'o')
 
     return string
 
@@ -67,7 +72,6 @@ def findEquipos(strResultados):
 
         if not sp[0] in equipos:
             equipos[sp[0]] = replaceHtml(sp[1])
-
 
 
 # Obtengo una lista con los partidos de futbol de una temporada
